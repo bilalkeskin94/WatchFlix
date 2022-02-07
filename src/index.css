@@ -1,13 +1,82 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar {
+  background: #fff;
+  outline: 0;
+  height: 10px;
 }
+
+::-webkit-scrollbar-thumb {
+  background: #dbdbdb;
+  border-radius: 20px;
+  outline: 0;
+}
+
+.movie {
+  margin: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.movie img {
+  max-width: 150px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: none;
+  border: 0;
+  border-radius: 15px;
+}
+
+.movie--vote__average {
+  background-color: #081C22;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.movie--container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.movie--info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.movie--title {
+  font-size: 17spx;
+  margin-top: -15px;
+  font-weight: bold;
+}
+
+.movie--date {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.movie--title, .movie--date {
+  padding-left: 14px;
+}
+/*# sourceMappingURL=index.css.map */

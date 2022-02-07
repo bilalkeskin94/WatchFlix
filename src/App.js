@@ -1,12 +1,15 @@
-import './App.css';
-import axios from 'axios';
+import React, {  lazy, Suspense} from 'react';
+import Loading from './components/Loading';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const Movie = lazy(() => import('./pages/Movie'));
+
 
 function App() {
-	axios.get({});
 	return (
-		<div className="App">
-			Hello React
-		</div>
+		<Suspense fallback={<Loading></Loading>}>
+			<Movie />
+		</Suspense>
 	);
 }
 
