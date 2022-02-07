@@ -1,23 +1,13 @@
-import React from 'react';
-import { Button, Spinner } from 'react-bootstrap';
-const Loading = () => {
-	return (
-		<div>
-			<div  className='container d-flex justify-content-center'>
-				<Button variant="primary" disabled>
-					<Spinner
-						as="span"
-						variant="warning"
-						size="sm"
-						role="status"
-						aria-hidden="true"
-						animation="grow"
-					/>
-					Loading...
-				</Button>
-			</div>
-		</div>
-	);
-};
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
+
+ function Loading() {
+  return (
+    <Box sx={{ width: '100%' }}>
+      <LinearProgress />
+    </Box>
+  );
+}
 
 export default Loading;

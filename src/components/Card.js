@@ -46,7 +46,7 @@ CircularProgressWithLabel.propTypes = {
 	value: PropTypes.number.isRequired,
 };
 
-const MovieCard = ({ title, poster_path, vote_average, release_date }) => {
+const MovieCard = ({ title, poster_path, vote_average, release_date, name,first_air_date  }) => {
 	const setVoteColor = (vote) => {
 		if (vote >= 7) {
 			return '#00c853';
@@ -59,7 +59,7 @@ const MovieCard = ({ title, poster_path, vote_average, release_date }) => {
 
 	return (
 		<div className="movie">
-			<img src={IMG_API + poster_path} alt={title} />
+			<img src={IMG_API + poster_path} alt={title || name} />
 			<CircularProgressWithLabel
 				sx={{ color: `${setVoteColor(vote_average)}`}}
 				className="movie--vote__average"
@@ -67,10 +67,10 @@ const MovieCard = ({ title, poster_path, vote_average, release_date }) => {
 			/>
 
 			<h6 className="movie--title">
-				{title ? `${title}` : 'No name has been found'}
+				{title ? `${title}` : name ? `${name}` : `$No Title`}
 			</h6>
 			<p className="movie--date">
-				{release_date ? `${release_date}` : 'No release date has been found'}
+				{release_date ? `${release_date}` : first_air_date ? `${first_air_date}` : `$No Release Date`}
 			</p>
 		</div>
 	);

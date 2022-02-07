@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import MovieCard from '../components/MovieCard';
+import Card from '../components/Card';
 
 
 
-const Movie = () => {
+const Streaming = () => {
 	const trendingAPI = 'https://api.themoviedb.org/3/trending/all/day?api_key=';
 
-	const [movies, setMovies] = useState([]);
+	const [streaming, setStreaming] = useState([]);
 
 	const fetchData = async () => {
 		const { data } = await axios.get(
 			`${trendingAPI}${process.env.REACT_APP_API_KEY}`
 		);
-		setMovies(data.results);
+		setStreaming(data.results);
 	};
 
 	useEffect(() => {
@@ -22,9 +22,9 @@ const Movie = () => {
 
 	return (
 		<div className="movie--container">
-			{movies && movies.map((movie) =>  <MovieCard key={movie.id} {...movie} /> 	)}
+			{streaming && streaming.map((stream) =>  <Card key={stream.id} {...stream} /> 	)}
 		</div>
 	);
 };
 
-export default Movie;
+export default Streaming;

@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,7 +39,7 @@ body {
 }
 
 .movie--vote__average {
-  background-color: #081C22;
+  background-color: #081c22;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -78,5 +78,18 @@ body {
 
 .movie--title, .movie--date {
   padding-left: 14px;
+}
+
+/* Material UI css overriding */
+.css-1aquho2-MuiTabs-indicator {
+  height: 37px !important;
+  border-radius: 30px !important;
+  top: 0 !important;
+  background-color: #032541 !important;
+  z-index: -1;
+}
+
+.css-176kbi7-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #4be0b4 !important;
 }
 /*# sourceMappingURL=index.css.map */
