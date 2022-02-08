@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
 
-
-
 const Streaming = () => {
 	const trendingAPI = 'https://api.themoviedb.org/3/trending/all/day?api_key=';
 
@@ -22,7 +20,8 @@ const Streaming = () => {
 
 	return (
 		<div className="movie--container">
-			{streaming && streaming.map((stream) =>  <Card key={stream.id} {...stream} /> 	)}
+			{streaming &&
+				streaming.map((stream) => <Card key={stream.id} {...stream} />)}
 		</div>
 	);
 };

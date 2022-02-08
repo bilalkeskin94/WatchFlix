@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
 
-
-
 const Streaming = () => {
 	const trendingAPI = 'https://api.themoviedb.org/3/movie/popular?api_key=';
 	const [cinema, setCinema] = useState([]);
@@ -21,7 +19,7 @@ const Streaming = () => {
 
 	return (
 		<div className="movie--container">
-			{cinema && cinema.map((cinema) =>  <Card key={cinema.id} {...cinema} /> 	)}
+			{cinema && cinema.map((cinema) => <Card key={cinema.id} {...cinema} />)}
 		</div>
 	);
 };

@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../components/Card';
 
-const Tv = () => {
-	const tvAPI = ' https://api.themoviedb.org/3/tv/top_rated?api_key=';
+const FreeTv = () => {
+	const tvAPI = 'https://api.themoviedb.org/3/tv/airing_today?api_key=';
 
 	const [tv, setTv] = useState([]);
 
@@ -25,4 +25,4 @@ const Tv = () => {
 	);
 };
 
-export default Tv;
+export default FreeTv;

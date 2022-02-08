@@ -1,14 +1,15 @@
-import React, { lazy, Suspense } from 'react';
-import Loading from './components/Loading';
+import React, { lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Popular = lazy(() => import('./pages/Popular'));
+const Popular = lazy(() => import('./components/Popular.js'));
+const Free = lazy(() => import('./components/Free'));
 
 function App() {
 	return (
-		<Suspense fallback={<Loading />}>
+		<>
 			<Popular />
-		</Suspense>
+			<Free />
+		</>
 	);
 }
 
